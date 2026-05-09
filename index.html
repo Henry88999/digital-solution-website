@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业数字化转型解决方案 | 你的品牌名</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        :root {
+            --primary: #0F3460;
+            --primary-light: #1A508B;
+            --tech-blue: #00D8FF;
+            --gray-light: #F8FAFC;
+            --gray: #64748B;
+            --text-dark: #1E293B;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏 */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--gray);
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* 首屏Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--gray-light) 0%, #E2E8F0 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0 0L100 100M100 0L0 100" stroke="%2300D8FF" stroke-width="0.5" opacity="0.2"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: var(--primary-light);
+        }
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            margin-left: 15px;
+        }
+        .btn-secondary:hover {
+            background: var(--gray-light);
+        }
+
+        /* 痛点模块 */
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 50px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--tech-blue);
+        }
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: var(--gray);
+        }
+
+        /* 产品模块 */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .product-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .product-body {
+            padding: 30px;
+        }
+        .product-body ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        .product-body li {
+            padding: 10px 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav-inner">
+            <!-- 这里改成你的品牌名 -->
+            <div class="logo">你的品牌名 | 企业数字化转型方案</div>
+            <div class="nav-links">
+                <a href="#solutions">解决方案</a>
+                <a href="#products">产品服务</a>
+                <a href="#contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>从多系统割裂到数据打通<br>企业数字化转型全套落地方案</h1>
+            <p>针对财务、供应链、生产等多系统数据孤岛问题，提供从数据治理到AI预测的一站式教程与源码包，助力中小企业低成本完成数字化升级。</p>
+            <!-- 【修改点1】这里填你的闲鱼商品链接，用户点击直接跳转 -->
+            <a href="https://m.tb.cn/h.iyJzImT?tk=tKpL5oCK5Hg" target="_blank" class="btn">立即了解产品</a>
+            <!-- 【修改点2】这里填你的联系方式（微信/QQ/闲鱼号），也可以加个跳转链接 -->
+            <a href="#contact" class="btn btn-secondary">免费咨询</a>
+        </div>
+    </section>
+
+    <!-- 痛点模块 -->
+    <section class="section" id="solutions">
+        <div class="container">
+            <h2 class="section-title">我们解决的企业痛点</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>系统孤岛，数据不通</h3>
+                    <p>财务、业务、供应链使用不同系统，数据无法自动同步，对账困难，决策滞后。</p>
+                </div>
+                <div class="card">
+                    <h3>人工统计，效率低下</h3>
+                    <p>依赖Excel手工汇总数据，耗时易错，无法实时获取经营全貌。</p>
+                </div>
+                <div class="card">
+                    <h3>经验决策，风险难控</h3>
+                    <p>采购、生产依赖经验判断，容易造成库存积压或缺货，成本无法精准控制。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品模块 -->
+    <section class="section" style="background: var(--gray-light);" id="products">
+        <div class="container">
+            <h2 class="section-title">产品服务</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>基础教程版</h3>
+                    </div>
+                    <div class="product-body">
+                        <ul>
+                            <li>数字化转型架构PPT模板</li>
+                            <li>SAP/ERP数据导出标准模板</li>
+                            <li>90天落地执行SOP与计划</li>
+                            <li>全套商用报价与合同模板</li>
+                        </ul>
+                        <!-- 【修改点3】改成你闲鱼上的定价 -->
+                        <div class="product-price">¥49.9</div>
+                        <!-- 【修改点4】填你的闲鱼链接，用户点击直接下单 -->
+                        <a href="https://m.tb.cn/h.iyJzImT?tk=tKpL5oCK5Hg" target="_blank" class="btn" style="display:block;text-align:center;">立即购买</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>高级源码版</h3>
+                    </div>
+                    <div class="product-body">
+                        <ul>
+                            <li>包含基础版所有内容</li>
+                            <li>AI销量预测可运行Python源码</li>
+                            <li>AI知识库搭建零代码教程</li>
+                            <li>Power BI经营看板模板</li>
+                            <li>1次线上答疑指导</li>
+                        </ul>
+                        <!-- 【修改点5】改成你闲鱼上的定价 -->
+                        <div class="product-price">¥199</div>
+                        <!-- 【修改点6】填你的闲鱼链接，用户点击直接下单 -->
+                        <a href="https://m.tb.cn/h.iyJzImT?tk=tKpL5oCK5Hg" target="_blank" class="btn" style="display:block;text-align:center;">立即购买</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚（联系方式） -->
+    <footer id="contact">
+        <div class="container">
+            <!-- 【修改点7】这里换成你的联系方式 -->
+            <p>免费咨询：微信 390063932/闲鱼号：可米老师</p>
+            <p style="margin-top:10px;font-size:14px;opacity:0.8;">© 2024 你的品牌名 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>
